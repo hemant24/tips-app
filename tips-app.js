@@ -14,6 +14,20 @@ const tips = {
     "Use 'instanceof' checks before casting objects to prevent ClassCastException at runtime.",
     "Prefer immutable objects to reduce bugs and improve thread safety in multi-threaded applications.",
     "Use the 'volatile' keyword for variables accessed by multiple threads to ensure visibility of changes."
+  ],
+  react: [
+    "Use the 'key' prop correctly when rendering lists to help React identify which items have changed, improving performance and preventing bugs.",
+    "Break your components into smaller, reusable pieces instead of creating large monolithic components for better maintainability and testability.",
+    "Use React.memo() for functional components to prevent unnecessary re-renders when props haven't changed.",
+    "Always clean up side effects in useEffect by returning a cleanup function to prevent memory leaks and duplicate subscriptions.",
+    "Use the Context API for state that is accessed by many components to avoid prop drilling and simplify component trees.",
+    "Use useCallback() to memoize functions passed to child components, preventing unnecessary child re-renders.",
+    "Prefer controlled components where form input values are managed by React state for predictable behavior.",
+    "Use useMemo() to memoize expensive computations and only recalculate when dependencies change.",
+    "Use Error Boundaries to catch JavaScript errors anywhere in the component tree and display a fallback UI.",
+    "Implement lazy loading with React.lazy() and Suspense to code split and load components only when needed.",
+    "Lift state up to the nearest common ancestor when multiple components need to share state for better data flow.",
+    "Use custom hooks to extract and reuse stateful logic across multiple components for cleaner code."
   ]
 };
 

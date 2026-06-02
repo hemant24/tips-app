@@ -66,7 +66,8 @@ to avoid creating multiple intermediate String objects.
 
 Currently supported topics:
 
-- **Java** -
+- **Java** - Object-oriented programming best practices, Java-specific features and optimizations
+- **React** - Component design, hooks, performance optimization, and state management
 
 
 ## Project Structure
