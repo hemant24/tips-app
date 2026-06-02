@@ -22,14 +22,13 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-function displayMenu() {
+function displayMenu(topics) {
   console.clear();
   console.log('╔═══════════════════════════════════╗');
   console.log('║      Tips Generator App           ║');
   console.log('╚═══════════════════════════════════╝\n');
   console.log('Select a topic:\n');
 
-  const topics = Object.keys(tips);
   topics.forEach((topic, index) => {
     console.log(`  ${index + 1}. ${topic.charAt(0).toUpperCase() + topic.slice(1)}`);
   });
@@ -51,12 +50,12 @@ function askQuestion(query) {
 
 async function main() {
   let running = true;
+  const topicKeys = Object.keys(tips);
 
   while (running) {
-    displayMenu();
+    displayMenu(topicKeys);
 
     const choice = await askQuestion('Enter your choice: ');
-    const topicKeys = Object.keys(tips);
     const selectedIndex = parseInt(choice) - 1;
 
     if (selectedIndex === topicKeys.length) {
